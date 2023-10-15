@@ -83,16 +83,12 @@
     //example basic problem or assignment
     //Image should be removed when clicked on it
 
-    document.querySelector("#images").addEventListener(
-      "click",
-      function (e) {
-        console.log(e.target);
-        if (e.target.tagName === "IMG") {
-          const removeIt = e.target.parentNode;
-          removeIt.remove();
-        }
-      },
-      false
-    );
+    document.querySelector("#images").addEventListener(function (e) {
+      console.log(e.type);
+      if (e.target.tagName === "IMG") {
+        const removeIt = e.target.parentNode;
+        removeIt.remove();
+      }
+    }, false);
   </script>
 </html>

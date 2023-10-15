@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Js setTimeout and setTimeInterval</title>
+  </head>
+  <body>
+    <h1>chai aur js</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    let hey;
+    document.querySelector("#start").addEventListener("click", function () {
+      //   hey;
+      hey = setInterval(function () {
+        // console.log("in setInterval start");
+        console.log("say my name", Date.now());
+      }, 1000);
+    });
+    document.querySelector("#stop").addEventListener("click", function () {
+      console.log("stopping interval");
+      clearInterval(hey);
+    });
+  </script>
+</html>
